@@ -1,14 +1,15 @@
-import { useState } from "react"
+import { useCount } from "../context/countContext";
 
 export function Count() {
-    const [count, setCount] = useState(0)
+
+    const {count, setCount} = useCount()
 
     return (
         <button
             className="w-max"
             onClick={() => { setCount(count + 1) }} 
         > 
-        Count: {count} 
+        Count: {count}
         </button>
     )
 }
